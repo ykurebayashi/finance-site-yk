@@ -1,6 +1,7 @@
 @import "./variables.module.scss";
 
 .header {
+  position: absolute;
   width: 100%;
   height: $header-height;
   background-color: transparent;
@@ -19,6 +20,7 @@
 .logo {
   font-weight: $bold;
   font-size: 24px;
+  color: $white;
 }
 
 .nav {
@@ -28,6 +30,7 @@
   left: 0;
   background: $white;
   padding-block: 1rem;
+  z-index: 3;
 }
 
 .list {

@@ -1,0 +1,39 @@
+@import "./variables.module.scss";
+
+.hero {
+  position: absolute;
+  bottom: -12rem;
+  width: 100%;
+  padding-block: 3rem;
+  background-color: $lime-green;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+    padding-inline: $padding-content;
+    max-width: 1200px;
+
+    .title {
+      padding-block-end: 0.5rem;
+      font-size: 22px;
+      color: $white;
+    }
+
+    .description {
+      font-size: 15px;
+      color: $white;
+    }
+
+    .button {
+      background-color: $lime-green;
+      border: $white 2px solid;
+
+      &:hover {
+        color: $lime-green;
+        background-color: $white;
+      }
+    }
+  }
+}

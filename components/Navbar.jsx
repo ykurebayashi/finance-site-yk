@@ -9,6 +9,7 @@ const Navbar = () => {
   const menuHandler = () => {
     setMenuActive(!menuActive);
   };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>

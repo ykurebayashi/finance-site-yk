@@ -19,6 +19,17 @@ a {
   text-decoration: none;
 }
 
+button {
+  padding-block: 1.1rem;
+  padding-inline: 2.5rem;
+  font-weight: $bold;
+  font-size: 13px;
+  color: $white;
+  border-radius: 50px;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
 svg {
   cursor: pointer;
 }
