@@ -1,5 +1,5 @@
-import Navbar from "./header/Navbar";
-import SubHeader from "./header/SubHeader";
+import Navbar from "./Navbar";
+import SubHeader from "./SubHeader";
 
 const Layout = ({ children }) => {
   return (
