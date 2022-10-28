@@ -4,7 +4,7 @@ import SubHeader from "./SubHeader";
 const Layout = ({ children }) => {
   return (
     <>
-      <SubHeader />
+      {/* <SubHeader /> */}
       <Navbar />
       <div>{children}</div>
     </>
