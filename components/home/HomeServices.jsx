@@ -8,9 +8,7 @@ const HomeServices = () => {
           <h2 className={styles.title}>
             Financial <span>Services</span>
           </h2>
-          <span className={styles.headingSpan}>
-            ALIQUAM ID URNA IMPERDIET LIBERO MOLLIS HENDRERIT
-          </span>
+          <span>ALIQUAM ID URNA IMPERDIET LIBERO MOLLIS HENDRERIT</span>
         </div>
       </div>
     </div>

@@ -17,6 +17,10 @@
   justify-content: center;
   text-align: center;
 
+  span {
+    color: $grey;
+  }
+
   .title {
     font-weight: $semi;
     font-size: 36px;
