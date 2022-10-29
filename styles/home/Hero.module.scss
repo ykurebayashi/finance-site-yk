@@ -1,41 +1,48 @@
-@import "./variables.module.scss";
+@import "../variables.module.scss";
+@import "../breakpoints.module.scss";
 
 .hero {
-  // padding-block-start: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background-image: url(../public/imgs/hero.png);
+  background-image: url(../../public/imgs/hero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include lg {
+    justify-content: initial;
+  }
 
   .container {
-    margin-inline: auto;
-    padding-inline: 1.5rem;
-    max-width: 1440px;
+    padding-inline: 2rem;
+    height: 100%;
+    @include lg {
+      margin-inline-start: 10rem;
+    }
+    @include xl {
+      margin-inline-start: 16rem;
+    }
   }
 }
 
 .content {
-  position: absolute;
-  width: 75%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  width: 100%;
   .subTitle {
     padding-block-end: 0.5rem;
     letter-spacing: 0.5px;
-    font-size: 22px;
+    font-size: clamp(18px, 2vw, 22px);
     color: $lime-green;
   }
 
   .title {
     max-width: 500px;
-    font-size: 44px;
+    font-size: clamp(28px, 5vw, 44px);
     color: $white;
   }
 
   .description {
+    padding-block-start: 1.2rem;
     padding-block-end: 2.5rem;
     max-width: 570px;
     line-height: 2;

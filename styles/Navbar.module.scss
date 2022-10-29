@@ -1,10 +1,12 @@
 @import "./variables.module.scss";
+@import "./breakpoints.module.scss";
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: $header-height;
   background-color: transparent;
+  z-index: 3;
 
   .container {
     display: flex;
@@ -14,6 +16,13 @@
     padding-inline: $padding-content;
     max-width: 1200px;
     height: 100%;
+
+    .menu {
+      display: initial;
+      @include lg {
+        display: none;
+      }
+    }
   }
 }
 
@@ -31,43 +40,40 @@
   background: $white;
   padding-block: 1rem;
   z-index: 3;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
-
-  li {
-    a {
-      letter-spacing: 0.5px;
-      font-weight: $medium;
-      font-size: 15px;
-      color: $light-black;
-      transition: 0.1s ease-in;
-
-      &:hover {
-        color: $lime-green;
-      }
-    }
+  @include md {
+    top: calc($header-height + $subheader-height);
   }
-}
-
-@media (min-width: 65rem) {
-  .nav {
+  @include lg {
     all: unset;
   }
 
   .list {
-    flex-direction: row;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    @include lg {
+      flex-direction: row;
+      gap: 3rem;
+    }
 
-    a {
-      padding-block-end: 1rem;
+    li {
+      a {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+        color: $light-black;
+        transition: 0.1s ease-in;
+        @include lg {
+          color: $white;
+          padding-block-end: 1rem;
+        }
 
-      &:hover {
-        border-bottom: $lime-green 3px solid;
+        &:hover {
+          color: $lime-green;
+          @include lg {
+            border-bottom: $lime-green 3px solid;
+          }
+        }
       }
     }
   }

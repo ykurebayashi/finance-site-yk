@@ -1,8 +1,8 @@
-import styles from "../../styles/HeroBottom.module.scss";
+import styles from "../../styles/home/RequestForm.module.scss";
 
-const HeroBottom = () => {
+const RequestForm = () => {
   return (
-    <div className={styles.hero}>
+    <div className={styles.request}>
       <div className={styles.container}>
         <div className={styles.content}>
           <h4 className={styles.title}>Request a call back right now?</h4>
@@ -16,4 +16,4 @@ const HeroBottom = () => {
   );
 };
 
-export default HeroBottom;
+export default RequestForm;

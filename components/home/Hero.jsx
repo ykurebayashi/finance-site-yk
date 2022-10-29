@@ -1,5 +1,4 @@
-import styles from "../../styles/Hero.module.scss";
-import HeroBottom from "./HeroBottom";
+import styles from "../../styles/home/Hero.module.scss";
 
 const Hero = () => {
   return (
@@ -16,7 +15,6 @@ const Hero = () => {
           <button className={styles.button}>CONTACT US</button>
         </div>
       </div>
-      <HeroBottom />
     </div>
   );
 };
