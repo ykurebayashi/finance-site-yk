@@ -51,8 +51,7 @@
   }
 
   .button {
-    background-color: $lime-green;
-    border: none;
+    @include buttonGreen;
 
     &:hover {
       color: $lime-green;

@@ -30,7 +30,7 @@ const Navbar = () => {
           </nav>
         )}
         <div className={styles.menu}>
-          <FaBars onClick={menuHandler} size="35" color="#a4c639" />
+          <FaBars onClick={menuHandler} size="30" color="#a4c639" />
         </div>
       </div>
     </header>

@@ -35,3 +35,8 @@ $header-height: 90px;
     }
   }
 }
+
+@mixin buttonGreen {
+  background-color: $lime-green;
+  border: none;
+}
