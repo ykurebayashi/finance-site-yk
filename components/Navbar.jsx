@@ -5,18 +5,17 @@ import styles from "../styles/Navbar.module.scss";
 import { NavbarLinks } from "./NavbarLinks";
 
 const Navbar = () => {
-  const [menuActive, setMenuActive] = useState(false);
-  const [navActive, setNavActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
   const menuHandler = () => {
-    setMenuActive(!menuActive);
+    setIsActive(!isActive);
   };
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>FINANCE BUSINESS</div>
-        {!menuActive && (
+        {!isActive && (
           <nav className={styles.nav}>
             <ul className={styles.list}>
               {NavbarLinks.map((item, index) => {
@@ -29,8 +28,9 @@ const Navbar = () => {
             </ul>
           </nav>
         )}
-        <div className={styles.menu}>
-          <FaBars onClick={menuHandler} size="30" color="#a4c639" />
+
+        <div className={styles.menu} onClick={menuHandler}>
+          <FaBars size="30" color="#a4c639" />
         </div>
       </div>
     </header>

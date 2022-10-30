@@ -6,7 +6,7 @@
   width: 100%;
   height: $header-height;
   background-color: transparent;
-  z-index: 3;
+  z-index: 10;
 
   .container {
     display: flex;
@@ -34,15 +34,14 @@
 
 .nav {
   position: fixed;
+  // top: -100vh;
   top: $header-height;
   right: 0;
   left: 0;
   background: $white;
   padding-block: 1rem;
+  transition: 0.3s ease-in;
   z-index: 3;
-  @include md {
-    top: calc($header-height + $subheader-height);
-  }
   @include lg {
     all: unset;
   }
