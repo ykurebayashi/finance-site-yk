@@ -1,0 +1,72 @@
+@import "../variables.module.scss";
+@import "../breakpoints.module.scss";
+
+.solutions {
+  padding-block: 8rem;
+  background-image: url(../../public/imgs/solutionsbg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 4.5rem;
+    margin-inline: auto;
+    padding-inline: $padding-content;
+
+    max-width: 1140px;
+  }
+}
+
+.heading {
+  .head {
+    color: $white;
+    @include sectionHeading;
+  }
+
+  .subHead {
+    color: $white;
+    @include subHeading;
+  }
+
+  .description {
+    color: $white;
+    @include textDescription;
+  }
+
+  .button {
+    @include buttonGreen;
+    &:hover {
+      color: $lime-green;
+      background-color: $white;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 0;
+  place-items: center;
+
+  .card {
+    padding-block: 3rem;
+    padding-inline: 1rem;
+    max-width: 255px;
+    text-align: center;
+    background-color: rgb($white, 0.1);
+
+    .number {
+      font-size: 36px;
+      font-weight: $bold;
+      color: $lime-green;
+    }
+
+    .title {
+      font-size: 20px;
+      color: $white;
+    }
+  }
+}

@@ -2,13 +2,13 @@
 @import "../breakpoints.module.scss";
 
 .services {
-  padding-block-start: 8rem;
+  padding-block: 8rem;
   width: 100%;
 
   .container {
     margin-inline: auto;
     padding-inline: $padding-content;
-    max-width: 1200px;
+    max-width: 1140px;
   }
 }
 
@@ -19,30 +19,31 @@
   justify-content: center;
   text-align: center;
 
-  span {
-    color: $grey;
-    font-size: 15px;
-  }
-
   .head {
-    font-weight: $semi;
-    font-size: 36px;
-    span {
-      font-size: 36px;
-      color: $lime-green;
-    }
+    @include sectionHeading;
+  }
+  .subHead {
+    color: $grey;
+    @include subHeading;
   }
 }
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  padding-block-start: 3rem;
+  padding-block-start: 4rem;
+  gap: 2rem;
 
   .card {
     max-width: 350px;
+    flex: 1;
+
+    .img {
+      width: 100%;
+      height: 100%;
+    }
     .text {
       padding-block: 1.5rem;
       padding-inline: 1.5rem;
@@ -52,10 +53,8 @@
       }
 
       .description {
-        padding-block-end: 1.5rem;
-        line-height: 2;
-        font-size: 14px;
         color: $grey;
+        @include textDescription;
       }
 
       .button {

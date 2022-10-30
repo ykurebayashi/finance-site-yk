@@ -40,3 +40,22 @@ $header-height: 90px;
   background-color: $lime-green;
   border: none;
 }
+
+@mixin sectionHeading {
+  font-weight: $semi;
+  font-size: 36px;
+  span {
+    font-size: 36px;
+    color: $lime-green;
+  }
+}
+
+@mixin subHeading {
+  font-size: 15px;
+}
+
+@mixin textDescription {
+  padding-block-end: 1.5rem;
+  line-height: 2;
+  font-size: 14px;
+}

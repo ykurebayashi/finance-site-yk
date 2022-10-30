@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import Hero from "../components/home/Hero";
 import RequestForm from "../components/home/RequestForm";
 import HomeServices from "../components/home/HomeServices";
+import HomeSolutions from "../components/home/HomeSolutions";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <RequestForm />
       <HomeServices />
+      <HomeSolutions />
     </div>
   );
 }

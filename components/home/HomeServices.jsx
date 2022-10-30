@@ -1,6 +1,5 @@
 import styles from "../../styles/home/HomeServices.module.scss";
 import Image from "next/image";
-
 import { HomeServiceItems } from "./HomeServiceItems";
 
 const HomeServices = () => {
@@ -11,18 +10,21 @@ const HomeServices = () => {
           <h2 className={styles.head}>
             Financial <span>Services</span>
           </h2>
-          <span>ALIQUAM ID URNA IMPERDIET LIBERO MOLLIS HENDRERIT</span>
+          <span className={styles.subHead}>
+            ALIQUAM ID URNA IMPERDIET LIBERO MOLLIS HENDRERIT
+          </span>
         </div>
         <div className={styles.content}>
           {HomeServiceItems.map((item, index) => {
             return (
               <div className={styles.card} key={index}>
-                {/* <Image
+                <Image
+                  className={styles.img}
                   src={item.img}
                   alt="Service Image"
                   width="100"
                   height="100"
-                /> */}
+                />
                 <div className={styles.text}>
                   <h5 className={styles.title}>{item.title}</h5>
                   <p className={styles.description}>{item.description}</p>
